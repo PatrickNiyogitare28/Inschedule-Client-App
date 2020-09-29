@@ -1,0 +1,237 @@
+/* MOBILE */
+
+.navigation-container{
+    background: #2a9238  !important;
+    width: 100%;
+    top: 0% !important;
+    height: 10%;
+    
+}
+.insch-nav{
+    clear: both;
+   
+    width: 60%;
+   
+    float: right;
+}
+.insch-nav ul li{
+     display: inline;
+     /* margin-right: 2%; */
+     padding-top: 2%;
+}
+
+.insch-logo{
+    
+    width: 40%;
+    float: left;
+    position: absolute;
+}
+
+.insch-logo-img{
+   width:20%;
+   float: left;
+   position: absolute;
+  
+   
+}
+.insch-logo-img img{
+    width: 50px;
+    margin:0 10%;
+}
+.insch-logo-name{
+  clear:both;
+  width: 80%;
+  float: right;
+ 
+}
+.top-container{
+    /* background-color: red; */
+    clear:both;
+    width: 80%;
+    float:right;
+    /* margin-top: 2em; */
+    border-bottom: 1px grey solid;
+   
+ 
+}
+.sidebar-container{
+    /* margin-left: 0% !important; */
+    clear:both;
+    float:left;
+    /* margin-top: 4em; */
+    width: 20%;
+    background-color: #2a9238;
+    position: absolute;
+    height: 90%;
+
+}
+.sidebar{
+    width: 100%;
+   
+    float: left;
+    /* margin-left: -10em; */
+    background-color: #2a9238;
+    /* margin-top: 4em; */
+    
+}
+
+
+@media screen and (min-width:1200px){
+  
+    .insch-logo{
+        margin-top: 0.5%;
+    }
+    .insch-nav{
+        margin-top: 0.5%;
+    }
+    .insch-logo-img img{
+        width: 50px;
+        margin-left: 50%;
+    }
+
+    .insch-logo-name h5{
+       margin-top: 0.5em;
+    }
+    .insch-nav ul{
+        width: 30%;
+        float: right;
+       
+        /* margin-top: 0.7%; */
+     
+     }
+     
+}
+
+@media only screen and (max-width: 600px){
+    .mobile-prev{
+       
+        width: 100% !important;
+       
+    }
+    .navbar-header b{
+      display:none;
+    }
+   
+    .insch-nav{
+     
+        width: 60%;
+        clear: both;
+        float: right;
+    }
+    .insch-logo{
+       
+        width: 40%;
+        float: left;
+        position: absolute;
+    }
+    .insch-logo-img{
+        width: 70%;
+    }
+    .insch-logo-img img{
+        width: 50px;
+        margin-left: 10%;
+        margin-top: 10%;
+    }
+    .insch-logo-name{
+       display:none;
+    }
+    .insch-nav ul{
+      margin-top: 10%;
+      /* margin-left: 38%; */
+      
+     }
+     
+     .signIn-web-detail{
+         display: none;
+     }
+     .signIn-auth-wrapper{
+         width: 100%;
+     }
+     .form-signin{
+         width: 100%;
+     }
+     .signUp-auth-wrapper{
+         width: 100%;
+     }
+     .sign-up-image{
+         display:none;
+     }
+     .sidebar-container{
+         display: none;
+     }
+     .top-container{
+        width:100%;
+    }
+    .rate{
+        margin-top: 2em !important;
+       margin-left: 5%;
+       width: 90%;
+       height: 80%;
+        /* background: red; */
+      
+
+    }
+    .main-chat-container{
+        height: 95%;
+    }
+    .input-send{
+        margin-top: 18em;
+        /* background-color: blue; */
+    }
+
+    .sidebar-toggle-btn span{
+        display: block;
+        width: 30px;
+        height: 5px;
+        /* background: #151719; */
+        background: white;
+        margin: 4px 0px;
+        border-radius: 3px;
+
+    }
+    #mobile-sidebar{
+        display: block;
+        width: 200px;
+        height: 100%;
+        background: #2f883b;
+        position: fixed;
+        left: -200px;
+        transition: all 500ms linear;
+        z-index: 7;
+
+
+    }
+
+    #mobile-sidebar.active{
+        left: 0px; 
+        /* float: left; */
+        width: 70%;
+    }
+    #app-container.hide-container{
+        width: 100%;
+    }
+    .sidebar-toggle-btn{
+        display: block;
+        float: left;
+        margin-top: 6px;
+    }
+    #mobile-sidebar.hide-sidebar{
+        width: 200px;
+        left: -200px;
+    }
+    #mobile-sidebar img{
+        width: 38px;
+        
+    }
+    #mobile-sidebar ul li{
+        font-size: 13px;
+        color: rgba(230,230,230,0.9);
+        list-style: none;
+        padding: 15px 10px;
+        border-bottom: 1px solid rgba(100,100,100,0.3);
+    }
+    .navbar{
+        z-index: 9
+    }
+    
+}

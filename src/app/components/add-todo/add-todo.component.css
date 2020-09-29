@@ -1,0 +1,67 @@
+.save-btn{
+  
+  
+    margin-top: 1em;
+    float:right !important;
+    position: absolute;
+    width: 30%;
+    margin-left: 90%;
+    /* background-color: red !important; */
+  }
+  
+  
+  .save-btn img{
+    width: 45px;
+   
+  }
+  .save-btn button{
+    width:100%;
+   
+  }
+  .save-img{
+    width: 50%;
+    float: left;
+    /* background-color: yellow; */
+    position: absolute;
+    height: 100%;
+    border-bottom: 4px rgb(131, 128, 128) solid;
+    border-radius:  2px 2px 2px 2px;
+  }
+  .save-img button{
+    margin: 0 5%;
+  }
+  .save-img button:hover{
+   border-color: rgb(20, 124, 20);
+  }
+  .add-btn{
+    clear:both;
+    width: 50%;
+    float:right;
+    /* background-color: green; */
+    border-bottom: 4px black solid;
+    
+    border-radius: 2px 2px 2px 2px;
+  
+  }
+  .add-btn button{
+    margin: 0 3%;
+    
+  }
+  .add-btn button:hover{
+    border-color: rgb(35, 112, 35);
+  }
+  .main-container{
+      float:right;
+      width: 80%;
+      background: blue;
+      
+  }
+  mat-form-field {
+      float: left;
+     
+    }
+    .form-field{
+      margin-top: 15%;
+      margin-left: 8em;
+    }
+    

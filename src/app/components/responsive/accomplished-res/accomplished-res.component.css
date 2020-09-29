@@ -1,0 +1,39 @@
+@media only screen and (max-width: 600px){
+   
+    .container{
+        width: 100%;
+    }
+     .secondary-container{
+        width: 100%;
+      
+    }
+    
+ .get-accoplished-table-2{
+     width: 100%;
+     margin-top: -2em;
+ }
+ 
+ .header-table{
+     width: 100%;
+ }
+ 
+ }
+ 
+ @media screen and (min-width:1200px){
+     .header-table th{
+         padding: 1.4em;
+     }
+     .get-accoplished-table th{
+         padding-left: 2em !important;
+         /* background-color: red !important; */
+         color: rgb(70, 69, 67) !important;
+     }
+    .secondary-container{
+      
+        margin-left: 10%;
+    }
+    .get-accoplished-table-2{
+     margin-top: -2em;
+ }
+ }
+ 

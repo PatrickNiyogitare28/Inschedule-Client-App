@@ -1,0 +1,212 @@
+<div class="container">
+
+    <div class="primary-container">
+    
+    
+    <div class="secondary-container shadow p-3 mb-5 rounded">
+      
+           
+    
+           <div class="list-container mon-list">
+                <img (click)="directAddOnMon()"  src="../../../assets/icons/direct-add-icon.png" title="Add on Mon" alt="add on icon" class="header-icon">
+                <h5><b>Mon</b><span>Monday</span></h5>
+                <div class="schedule-task example-list"
+                cdkDropList
+                #monList="cdkDropList"
+                [cdkDropListData]="schedule_mon"
+                [cdkDropListConnectedTo]="[tueList,wedList,thurList,friList,satList,sunList]"
+                (cdkDropListDropped)="drop($event)"
+                >
+    
+                       <div class="task example-box" *ngFor="let userSchedule_mon of schedule_mon " cdkDrag>
+                           <h6><b>{{userSchedule_mon.eventName}}</b><span>{{userSchedule_mon.eventStartTime}} - {{userSchedule_mon.eventEndTime}}</span></h6>
+                           <img (click)="getAccoplished(userSchedule_sun._id)" src="../../../assets/icons/accoplished.png" alt="accop icon" srcset="" class="acomplish-img" title="Mark as Done">
+                           
+                           <div class="actions-container">
+                               <div class="edit-schedule-cont" [routerLink]="['update-schedule', userSchedule_mon._id]">
+                                   <img src="../../../assets/icons/pen-icon.png" alt="edit icon">
+                               </div>
+    
+                               <div class="remove-schedule-cont" (click)="removeSchedule_mon(userSchedule_mon._id)">
+                                    <img src="../../../assets/icons/delete.png" alt="edit icon">
+                                  
+                               </div>
+                           </div>
+                       </div>
+                </div>
+           </div>
+           
+           <div class="list-container tue-list">
+                <img (click)="directAddOnTue()"  src="../../../assets/icons/direct-add-icon.png" title="Add on Mon" alt="add on icon" class="header-icon">
+                <h5><b>Tue</b><span>Tuesday</span></h5>
+    
+                <div class="schedule-task  example-list"
+                cdkDropList
+                #tueList="cdkDropList"
+                [cdkDropListData]="schedule_tue"
+                [cdkDropListConnectedTo]="[monList,wedList,thurList,friList,satList,sunList]"
+                (cdkDropListDropped)="drop($event)"
+                >
+                        <div class="task example-box" *ngFor="let userSchedule_tue of schedule_tue " cdkDrag>
+                            <h6><b>{{userSchedule_tue.eventName}}</b><span>{{userSchedule_tue.eventStartTime}} - {{userSchedule_tue.eventEndTime}}</span></h6>
+                            <img (click)="getAccoplished(userSchedule_sun._id)" src="../../../assets/icons/accoplished.png" alt="accop icon" srcset="" class="acomplish-img" title="Mark as Done">
+                            
+                            <div class="actions-container">
+                                <div class="edit-schedule-cont" [routerLink]="['update-schedule', userSchedule_tue._id]">
+                                    <img src="../../../assets/icons/pen-icon.png" alt="edit icon">
+                                </div>
+     
+                                <div class="remove-schedule-cont" (click)="removeSchedule_tue(userSchedule_tue._id)">
+                                     <img src="../../../assets/icons/delete.png" alt="edit icon">
+                                   
+                                </div>
+                            </div>
+                        </div>
+                 </div>
+           </div>
+    
+           <div class="list-container wed-list">
+                <img (click)="directAddOnWed()"  src="../../../assets/icons/direct-add-icon.png" title="Add on Wed" alt="add on icon" class="header-icon">
+                <h5><b>Wed</b><span>Wedsday</span></h5>
+    
+                <div class="schedule-task  example-list" 
+                cdkDropList
+                                #wedList="cdkDropList"
+                                [cdkDropListData]="schedule_wed"
+                                [cdkDropListConnectedTo]="[monList,tueList,thurList,friList,satList,sunList]"
+                                (cdkDropListDropped)="drop($event)"
+                >
+                        <div class="task example-box" *ngFor="let userSchedule_wed of schedule_wed" cdkDrag>
+                            <h6><b>{{userSchedule_wed.eventName}}</b><span>{{userSchedule_wed.eventStartTime}} - {{userSchedule_wed.eventEndTime}}</span></h6>
+                            <img (click)="getAccoplished(userSchedule_wed._id)" src="../../../assets/icons/accoplished.png" alt="accop icon" srcset="" class="acomplish-img" title="Mark as Done">
+                            
+                            <div class="actions-container">
+                                <div class="edit-schedule-cont" [routerLink]="['update-schedule', userSchedule_wed._id]">
+                                    <img src="../../../assets/icons/pen-icon.png" alt="edit icon">
+                                </div>
+     
+                                <div class="remove-schedule-cont" (click)="removeSchedule_wed(userSchedule_wed._id)">
+                                     <img src="../../../assets/icons/delete.png" alt="edit icon">
+                                   
+                                </div>
+                            </div>
+                        </div>
+                 </div>
+           </div>
+           <div class="list-container thur-list">
+                <img (click)="directAddOnThur()"  src="../../../assets/icons/direct-add-icon.png" title="Add on Thur" alt="add on icon" class="header-icon">
+                <h5><b>Thur</b><span>Thursday</span></h5>
+    
+                <div class="schedule-task  example-list"
+                cdkDropList
+                                #thurList="cdkDropList"
+                                [cdkDropListData]="schedule_thur"
+                                [cdkDropListConnectedTo]="[monList,tueList,wedList,friList,satList,sunList]"
+                                (cdkDropListDropped)="drop($event)"
+                >
+                        <div class="task example-box" *ngFor="let userSchedule_thur of schedule_thur " cdkDrag>
+                            <h6><b>{{userSchedule_thur.eventName}}</b><span>{{userSchedule_thur.eventStartTime}} - {{userSchedule_thur.eventEndTime}}</span></h6>
+                            <img (click)="getAccoplished(userSchedule_thur._id)" src="../../../assets/icons/accoplished.png" alt="accop icon" srcset="" class="acomplish-img" title="Mark as Done">
+                            
+                            <div class="actions-container">
+                                <div class="edit-schedule-cont" [routerLink]="['update-schedule', userSchedule_thur._id]">
+                                    <img src="../../../assets/icons/pen-icon.png" alt="edit icon">
+                                </div>
+     
+                                <div class="remove-schedule-cont" (click)="removeSchedule_thur(userSchedule_thur._id)">
+                                     <img src="../../../assets/icons/delete.png" alt="edit icon">
+                                   
+                                </div>
+                            </div>
+                        </div>
+                 </div>
+           </div>
+           <div class="list-container fri-list">
+                <img (click)="directAddOnFri()"  src="../../../assets/icons/direct-add-icon.png" title="Add on Fri" alt="add on icon" class="header-icon">
+                <h5><b>Fri</b><span>Friday</span></h5>
+    
+                <div class="schedule-task  example-list" 
+                cdkDropList
+                #friList="cdkDropList"
+                [cdkDropListData]="schedule_fri"
+                [cdkDropListConnectedTo]="[monList,tueList,wedList,thurList,satList,sunList]"
+                (cdkDropListDropped)="drop($event)">
+    
+                        <div class="task example-box" *ngFor="let userSchedule_fri of schedule_fri " cdkDrag>
+                            <h6><b>{{userSchedule_fri.eventName}}</b><span>{{userSchedule_fri.eventStartTime}} - {{userSchedule_fri.eventEndTime}}</span></h6>
+                            <img (click)="getAccoplished(userSchedule_fri._id)" src="../../../assets/icons/accoplished.png" alt="accop icon" srcset="" class="acomplish-img" title="Mark as Done">
+                            
+                            <div class="actions-container">
+                                <div class="edit-schedule-cont" [routerLink]="['update-schedule', userSchedule_fri._id]">
+                                    <img src="../../../assets/icons/pen-icon.png" alt="edit icon">
+                                </div>
+     
+                                <div class="remove-schedule-cont" (click)="removeSchedule_fri(userSchedule_fri._id)">
+                                     <img src="../../../assets/icons/delete.png" alt="edit icon">
+                                   
+                                </div>
+                            </div>
+                        </div>
+                 </div>
+           </div>
+           <div class="list-container sat-list">
+                <img (click)="directAddOnSat()"  src="../../../assets/icons/direct-add-icon.png" title="Add on Sat" alt="add on icon" class="header-icon">
+                <h5><b>Sat</b><span>Saturday</span></h5>
+    
+                <div class="schedule-task  example-list" 
+                cdkDropList
+                #satList="cdkDropList"
+                [cdkDropListData]="schedule_sat"
+                [cdkDropListConnectedTo]="[monList,tueList,wedList,thurList,friList,sunList]"
+                (cdkDropListDropped)="drop($event)">
+    
+                        <div class="task example-box" *ngFor="let userSchedule_sat of schedule_sat " cdkDrag>
+                            <h6><b>{{userSchedule_sat.eventName}}</b><span>{{userSchedule_sat.eventStartTime}} - {{userSchedule_sat.eventEndTime}}</span></h6>
+                            <img (click)="getAccoplished(userSchedule_sat._id)" src="../../../assets/icons/accoplished.png" alt="accop icon" srcset="" class="acomplish-img" title="Mark as Done">
+                            
+                            <div class="actions-container">
+                                <div class="edit-schedule-cont" [routerLink]="['update-schedule', userSchedule_sat._id]">
+                                    <img src="../../../assets/icons/pen-icon.png" alt="edit icon">
+                                </div>
+     
+                                <div class="remove-schedule-cont" (click)="removeSchedule_sat(userSchedule_sat._id)">
+                                     <img src="../../../assets/icons/delete.png" alt="edit icon">
+                                   
+                                </div>
+                            </div>
+                        </div>
+                 </div>
+           </div>
+           <div class="list-container sun-list">
+                <img (click)="directAddOnSun()"  src="../../../assets/icons/direct-add-icon.png" title="Add on Sun" alt="add on icon" class="header-icon">
+                <h5><b>Sun</b><span>Sunday</span></h5>
+    
+                <div class="schedule-task  example-list" 
+                                            cdkDropList
+                                            #sunList="cdkDropList"
+                                            [cdkDropListData]="schedule_sun"
+                                            [cdkDropListConnectedTo]="[monList,tueList,wedList,thurList,friList,satList]"
+                                            (cdkDropListDropped)="drop($event)">
+    
+                        <div class="task example-box" *ngFor="let userSchedule_sun of schedule_sun" cdkDrag>
+                            <h6><b>{{userSchedule_sun.eventName}}</b><span>{{userSchedule_sun.eventStartTime}} - {{userSchedule_sun.eventEndTime}}</span></h6>
+                            <img (click)="getAccoplished(userSchedule_sun._id)" src="../../../assets/icons/accoplished.png" alt="accop icon" srcset="" class="acomplish-img" title="Mark as Done">
+                            
+                            <div class="actions-container">
+                                <div class="edit-schedule-cont" [routerLink]="['update-schedule', userSchedule_sun._id]">
+                                    <img src="../../../assets/icons/pen-icon.png" alt="edit icon">
+                                </div>
+     
+                                <div class="remove-schedule-cont" (click)="removeSchedule_sun(userSchedule_sun._id)">
+                                     <img src="../../../assets/icons/delete.png" alt="edit icon">
+                                   
+                                </div>
+                            </div>
+                        </div>
+                 </div>
+           </div>
+        </div>
+    </div> 
+    </div>
+        
+      

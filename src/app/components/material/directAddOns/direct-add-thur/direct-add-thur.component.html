@@ -1,0 +1,94 @@
+
+
+<mat-dialog-title><p  class="font-family">Add on <b>Thursday</b></p></mat-dialog-title>
+
+<mat-dialog-content class="font-family">
+ 
+     <form [formGroup]="angForm" novalidate>
+            <div class="form-group">
+             
+          
+              <input type="text" class="form-control" placeholder="task name*"
+                formControlName="eventName" 
+                #eventName 
+                [(ngModel)] = "userSchedule.eventName"/>
+            </div>
+            <div *ngIf="angForm.controls['eventName'].invalid && (angForm.controls['eventName'].dirty || angForm.controls['eventName'].touched)" class="alert alert-danger">
+              <div *ngIf="angForm.controls['eventName'].errors.required">
+                Event Name is required.
+              </div>
+            </div>
+            <div class="form-group">
+             
+             <input type="text" class="form-control"  formControlName="eventDay"  #eventDay [(ngModel)] = "userSchedule.eventDay" value="Thursday" hidden/>
+             <!-- <select name="eventDay" id="exampleFormControlSelect1"   type="text" class="form-control"  formControlName="eventDay"  #eventDay [(ngModel)] = "userSchedule.eventDay" >
+               <option value="Monday">Monday</option>
+               <option value="Tuesday">Tuesday</option>
+               <option value="Wensday">Wensday</option>
+               <option value="Thursday">Thursday</option>
+               <option value="Friday">Friday</option>
+               <option value="Saturday">Saturday</option>
+               <option value="Sunday">Sunday</option>
+             </select>
+             
+              -->
+            </div>
+            <div *ngIf="angForm.controls['eventDay'].invalid && (angForm.controls['eventDay'].dirty || angForm.controls['eventDay'].touched)" class="alert alert-danger">
+              <div *ngIf="angForm.controls['eventDay'].errors.required">
+              Day required
+              </div>
+            </div>
+             <div class="schedule-time-input">
+             <div class="startTime">
+            <div class="form-group ">
+
+              <input type="time" class="form-control" placeholder="from*"  formControlName="eventStartTime"    #eventStartTime  [(ngModel)] = "userSchedule.eventStartTime" />
+              
+            </div>
+            
+            <div *ngIf="angForm.controls['eventStartTime'].invalid && (angForm.controls['eventStartTime'].dirty || angForm.controls['eventStartTime'].touched)" class="alert alert-danger">
+              <div *ngIf="angForm.controls['eventStartTime'].errors.required">
+               Start Time is required
+              </div>
+            </div>
+          </div>
+            <div class="endTime">
+            <div class="form-group">
+                    
+                    <input type="time" class="form-control"  placeholder="to*"
+                      formControlName="eventEndTime" 
+                      #eventEndTime
+                      [(ngModel)] = "userSchedule.eventEndTime"
+                    />
+                  </div>
+                  <div *ngIf="angForm.controls['eventEndTime'].invalid && (angForm.controls['eventEndTime'].dirty || angForm.controls['eventEndTime'].touched)" class="alert alert-danger">
+                    <div *ngIf="angForm.controls['eventEndTime'].errors.required">
+                     End Time is required.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- <div class="form-group">
+              <button (click) = "updateSchedule(eventName.value, eventStartTime.value, eventEndTime.value, eventDay.value)" type="submit" class="btn btn-primary"
+              [disabled]="angForm.invalid" >
+                Update Product
+              </button>
+            </div> -->
+       
+        <!-- </div>     -->
+
+
+<div class="buttons">
+  <!-- <div class="btn-float-left"> -->
+<button mat-button mat-dialog-close  mat-dialog-close="true" class="bt-color-silver " >Cancel</button>
+<!-- </div> -->
+<!-- <div class="btn-float-right"> -->
+<button mat-button mat-dialog-close  (click) = "setSchedule(eventName.value, eventStartTime.value, eventEndTime.value, eventDay.value)" type="submit" class="btn-bg-green"
+              [disabled]="angForm.invalid" >
+                Add
+</button>
+<!-- </div> -->
+</div>
+</form>
+</mat-dialog-content>
+

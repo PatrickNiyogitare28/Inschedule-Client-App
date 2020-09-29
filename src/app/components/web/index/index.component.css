@@ -1,0 +1,72 @@
+.top-container{
+    background-color: rgb(70, 156, 70);
+    width: 100%;
+ height: 300px;
+}
+.second-container h2{
+    font-size: 4em;
+    font-weight: lighter;
+    margin-top: -5em !important;
+    margin-left: 2em;
+}
+.second-container h2 span{
+    color: white !important;
+}
+.second-container p{
+  margin-left: 8em;
+  font-size: 1.5em;
+  font-weight: lighter;
+  color: #201e1e;
+
+}
+.responsive-img-div{
+    width: 50%;
+    margin-left:50%;
+    margin-top: -11em;
+}
+.resp-img{
+    width: 500px;
+}
+.third-party-container{
+    width: 30%;
+    margin-left: 2em;
+
+}
+.third-party-container p{
+    margin-top: 2em;
+    font-size: 1.5em;
+    color: #504d4d;
+    font-weight: lighter;
+    text-align: center;
+    
+
+}
+.schedule_time{
+    width:100%;
+}
+.get-started-button button{
+    border-color: rgb(70, 156, 70);
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 0.8em;
+    margin-left: 10em;
+    background-color: white;
+    width:150px;
+}
+.get-started-button button:hover{
+    background-color: rgb(70, 156, 70);
+    color: white;
+    border-color: rgb(70, 156, 70);;
+}
+.footer{
+    margin-top: 3.5em;
+    /* bottom: 0%; */
+    background-color:rgba(208, 211, 208, 0.513);
+    width: 100%;
+
+}
+.footer p{
+    padding: 1em;
+    font-size: 1.05em;
+    text-align: center;
+}

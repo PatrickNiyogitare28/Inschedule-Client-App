@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="secondary-container">
+    <table class="table-one get-accoplished-table shadow p-3 mb-5 bg-white rounded header-table">
+        <tr>
+            <th>Task</th>
+            <th>Day</th>
+            <th>Start </th>
+            <th>End </th>
+            <!-- <th>Accop Date</th>
+            <th>Accop Time</th> -->
+            <th>Actions</th>
+        </tr>
+
+    </table>
+    <div class="container-srcroll get-accoplished-table-2 shadow p-3 ">
+    <table class="table-2">
+        <tr *ngFor="let accoplishedTash of accoplished">
+            <td><b>{{accoplishedTash.eventName}}</b></td>
+            <td>{{accoplishedTash.dayName}}</td>
+            <td>{{accoplishedTash.eventStartTime}}</td>
+            <td>{{accoplishedTash.eventEndTime}}</td>
+          <!-- <table>
+           <tr *ngFor="let accopData of accoplishedData">
+            <td>{{accopData.accoprished_date}}</td>
+            <td>{{accopData.accoprished_time}}</td>
+           </tr> 
+        </table>    -->
+            <td>...</td>
+            <div class="actions">
+                <img src="../../../assets/icons/re-add-schd.png" alt="re-set icon" srcset="" (click)="resetSchedule(accoplishedTash._id)" title="Re-set">
+                <img src="../../../assets/icons/delete-accop.png" alt="re-move icon" srcset="" (click)="removeSchedule(accoplishedTash._id)" title="Remove">
+            </div>
+        </tr>
+        
+    </table>
+</div>
+</div>
+</div>

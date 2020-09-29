@@ -1,0 +1,367 @@
+<!-- <div
+  class="navigation-container shadow  font-family mobile-prev" style="background-color: #2a9238;">
+     <div class="insch-logo" *ngIf="this.authService.isLoggedIn">
+     <div class="insch-logo-img">
+          <img src="../assets/icons/scd_logo.png" alt="" srcset="">
+     </div> 
+     <div class="insch-logo-name">
+          <h5>In<span>Schedule</span></h5>
+     </div>
+    
+   
+    </div>
+    <div class="insch-logo" *ngIf="this.authService.isLoggedOut">
+        <div class="insch-logo-img">
+             <img src="../assets/icons/scd_logo.png" alt="" srcset="">
+        </div> 
+        <div class="insch-logo-name">
+             <h5>In<span>Schedule</span></h5>
+        </div>
+       
+      
+       </div>
+
+
+    <div class="insch-nav" *ngIf="this.authService.isLoggedOut">
+       <div>
+          <ul class="loggedOut-nav-links">
+            <li (click)="displayForm('signIn')">Sign in</li>
+            <li class="left" (click)="displayForm('signUp')">Sign up</li>
+          </ul>
+       </div>
+    </div>
+
+    <div class="insch-nav" *ngIf="this.authService.isLoggedIn">
+        <div>
+           <ul>
+             <li><span><img src="../assets/images/person.png" alt="User Profile Pic" srcset="" class="profile_pic">{{loggedInUserName}}</span></li>
+           
+             <li> <button   type="button" class="btn btn-danger" mat-raised-button (click)="openDialog()">Logout</button></li>
+           </ul>
+        </div>
+     </div>
+
+    </div>
+
+ -->
+
+
+
+
+
+
+ 
+
+ <nav class="navbar shadow navbar-default header-bg-color"  role="navigation">
+  <div class="navbar-header" *ngIf="this.authService.isLoggedIn" >
+      <div class="sidebar-toggle-btn" (click)="toggleMobileSideBar()">
+          <!-- <img src="../assets/icons/showing.png" class=""> -->
+          <span></span>
+          <span></span>
+          <span></span>
+       </div>  
+  <a class="navbar-brand" routerLinkActive="active" routerLink="schedule-pg"><img src="../assets/icons/scd_logo.png" alt="" class="brand-icon"> <b><span>In</span>Schedule</b></a>
+  </div>
+  
+  <div class="navbar-header" *ngIf="this.authService.isLoggedOut" routerLinkActive="active" routerLink="home">
+    <a class="navbar-brand"><img src="../assets/icons/scd_logo.png" alt="" class="brand-icon"> <b><span>In</span>Schedule</b></a>
+  </div>
+
+  <div class="navigation-list" *ngIf="this.authService.isLoggedOut">
+    <ul>
+    <li (click)="displayForm('signIn')">SignIn</li>
+    <li  (click)="displayForm('signUp')">Sign up</li>
+  
+    </ul>
+    </div>
+
+    <div class="navigation-list" *ngIf="this.authService.isLoggedIn">
+      <ul>
+      <li class="active dropdown-toggle" data-toggle="dropdown"><img src="../assets/avatars/{{loggedInUserProfileAvatar}}" class="img-responsive img-circle nav-list-profile-avatar "  alt="profile img"> {{loggedInUserName}}</li>
+      <li>
+        <div class="btn-group">
+         <!-- <img src="../assets/icons/ic1.png" alt="actions icon" class="settiongs-btn dropdown-toggle" data-toggle="dropdown"> -->
+      <ul class="dropdown-menu">
+        <li data-toggle="modal" data-target="#myModal"><span><img src="../assets/icons/pro-icon1.png" alt=""> Account settings</span> </li><br>
+        <li (click)="openDialog()"><span><img src="../assets/icons/off.png" alt=""> Logout</span></li>
+        </ul>
+      </div>
+    </li>
+      </ul>
+      </div>
+
+ </nav>
+ 
+<!--MOBILE SIDE BAR-->
+<div id="mobile-sidebar" class="shadow">
+    <ul>
+       
+      <li (click)="navigateMobile(1)"> <img src="../assets/icons/week-schedule-icon.png" alt="week schedule icon"  srcset="">Week Schedule</li>
+      <li (click)="navigateMobile(2)"><img src="../assets/icons/add-to-schedule.png" alt="add schdl icon" srcset="">Add to Schedule</li>
+      <li (click)="navigateMobile(3)"><img src="../assets/icons/accoplished-schdls.png"  alt="" srcset="">Accomplished</li>
+      <li (click)="navigateMobile(4)"><img src="../assets/icons/todo-icon.png"  alt="" srcset="">Todo</li>
+    </ul>
+  </div>
+
+<div id="app-container">
+
+<div class="top-container font-family mobile-quick-access-btn" *ngIf="this.authService.isLoggedIn">
+   <!-- <div class="sidebar-toggle-btn" (click)="toggleMobileSideBar()">
+      <img src="../assets/icons/showing.png" class="">
+   </div> -->
+    <ul>
+        <!-- <li> <img src="../assets/icons/showing.png" class="sidebar-toggle-btn"></li> -->
+        <li (click)="subscribeToNotifications()"><img src="../assets/icons/notification-in.png" class="notification-icon" title="notifications"></li>
+        <li><img src="../assets/icons/settings.png" class="setting-icon" title="settings"></li>
+        <li><img src="../assets/icons/rate.png" class="rate-app-icon" (click)="getDisplayDiv('rate',1)" title="tell us"></li>
+    </ul>
+   
+ </div>
+ <!-- <div  class="rate-container rate shadow" *ngIf="this.authService.displayRateSection"> -->
+ <div class="rate" *ngIf="this.authService.displayRateSection">
+
+
+   
+
+   <div class="rate-header shadow">
+      <div class="top-of-container">
+          <img src="../assets/icons/close.png" alt="close icon" srcset="" (click)="getDisplayDiv('rate',1)">
+      </div>
+      <p>Question? Write to us.</p>
+    </div>
+
+   <div class="main-chat-container shadow">
+      <div class="chat-container">
+        
+        <div class="message user-msg shadow" *ngFor="let msg of userSentMessage">
+          <img class="chat-avatar" src="../assets/avatars/{{loggedInUserProfileAvatar}}">
+         
+          <p class="text-align-right">{{msg}}</p>
+          <!-- <div class="datetime">sent</div> -->
+        </div>
+        
+        <div class="message from-inschedule shadow">
+          <img class="inschedule-avatar" src="../assets/avatars/person.png">
+          <!-- <div class="datetime">23/03/2016 20:40</div> -->
+          <p class="text-align-left">Tell us! we send you feedback on <u>{{loggedInUserEmail}}</u></p>
+        </div>
+
+        <div class="message chat-top-wrapper">
+          <img class="chat-top-wrapper-img" src="../assets/icons/scd_logo.png">
+          <!-- <div class="datetime">23/03/2016 20:40</div> -->
+          <p class="text-align-left">We respond to you.</p>
+        </div>
+        
+      </div>
+      <form class="send-message-form shadow">
+        
+        <textarea cols="30" rows="1"  #message id="messageBox"  placeholder="Type message"></textarea>
+        <button type="submit" (click)="getUserMessage(message.value)">Send</button>
+       
+      </form>
+    </div>
+
+
+  <script>
+      $(function () {
+  $('form').on('submit', function (event) {
+    event.preventDefault();
+    var message = $('.message').first().clone();
+    message.find('p').text($('input').val());
+    message.prependTo('.chat-container');
+    $('input').val('');
+  });
+});
+  </script>
+  
+ </div>
+ 
+
+<ng-container *ngIf="show">
+<div class="sidebar-container font-family mobile-side-container" *ngIf="this.authService.isLoggedIn">
+  <div class="sidebar shadow-sm">
+
+      <div class="user-profile-img-div">
+              <img src="../assets/avatars/{{loggedInUserProfileAvatar}}" class="user-profile-temp-image" >
+      </div>
+      
+      <div class="sidebar-title">
+          <!-- <h4><mat-icon>reorder</mat-icon> Control Panel</h4> -->
+          <span>Control Panel</span>
+
+      </div>
+      <div class="view-shcedules " routerLinkActive="active" routerLink="get-schedule">
+         <!-- <h6><mat-icon>calendar_today</mat-icon>Week Schedule</h6>  -->
+         <span  class="router-link-para"><img src="../assets/icons/week-schedule-icon.png" alt="week schedule icon" class="week-schedule-icon" srcset=""> Week Schedule</span> 
+      </div>
+      <div class="set-shcedules" routerLinkActive="active" routerLink="set-schedule">
+        <!-- <h6><mat-icon>alarm_add</mat-icon>Add to Schedule</h6>  -->
+        <span  class="router-link-para"><img src="../assets/icons/add-to-schedule.png" alt="add schdl icon" class="add-schedule-icon" srcset=""> Add to Schedule</span> 
+     </div>
+     <div class="get-accoplished" routerLinkActive="active" routerLink="get-accoplished">
+        <!-- <h6><mat-icon>alarm_add</mat-icon>Accoplished</h6>  -->
+        <span  class="router-link-para"><img src="../assets/icons/accoplished-schdls.png" class="accoplished-icon" alt="" srcset=""> Accoplished</span> 
+     </div>
+     <div class="get-accoplished" routerLinkActive="active" routerLink="to-do">
+      <!-- <h6><mat-icon>alarm_add</mat-icon>Accoplished</h6>  -->
+      <span class="router-link-para"><img src="../assets/icons/todo-icon.png" class="accoplished-icon" alt="" srcset=""> To do</span> 
+   </div>
+
+   <!-- <div class="get-accoplished" routerLinkActive="active" routerLink="avatar"> -->
+    <!-- <h6><mat-icon>alarm_add</mat-icon>Accoplished</h6>  -->
+    <!-- <span class="router-link-para"><img src="../assets/icons/pen-icon.png" class="accoplished-icon" alt="" srcset="">Avatar</span>  -->
+  <!-- </div>  -->
+   
+  </div>
+</div>
+
+
+<div class="autho-handler mobile-autho-handler" *ngIf="this.authService.isLoggedOut">
+  
+
+     <div class="sign-in-component" *ngIf="this.authService.displaySignIn">
+        <div class="signIn-auth-wrapper  p-3 mb-5 bg-white rounded">
+            <form class="form-signin  shadow " [formGroup]="signinForm" novalidate >
+                <h3 class="h3 mb-3 font-weight-normal text-center">Log in</h3>
+                <p class="errorMessage">{{errorMessage}}</p>
+                <div class="signIn-form-box">
+                <div class="form-group">
+                    <!-- <label class="signIn-form-labels">Email</label> -->
+                    <input (click)="resetErrorMessage()"  type="email" class="form-control" formControlName="email" name="email" #email placeholder="Enter email" required>
+                </div>
+                <div class="form-group">
+                    <!-- <label class="signIn-form-labels">Password</label> -->
+                    <input (click)="resetErrorMessage()" type="password" class="form-control" formControlName="password" name="password" #password placeholder="Password">
+                </div>
+                <button  type="submit"  class="btn btn-block btn-primary signIn-button" (click)="loginUser(email.value,password.value)">Sign in</button>
+                 <p class="sign-In-paragraph" >Have no account? <span  (click)="displayForm('signUp')"><u title="sign up">Create an account</u></span></p>
+            </div>
+            </form>
+        </div>
+        <div class="signIn-web-detail">
+            <p class="signIn-top-paragraphy">All <span>InSchedule</span> Now you got time Protection</p>
+            <img src="../../../assets/images/schedule-img.png" alt="Schedule img" srcset="" class="schedule-login-img">
+        </div>
+     </div>
+
+     <div class="sign-up-component" *ngIf="this.authService.displaySignUp">
+      <div class="signUp-auth-wrapper    p-3 mb-5 bg-white rounded">
+
+        <form class="form-signUp shadow"  novalidate [formGroup]="signupForm">
+            <h3 class="h3 mb-3 font-weight-normal text-center">Sign up</h3>
+            <div class="form-group">
+               
+                <input type="text" class="form-control" name="name" formControlName="name" #name placeholder="name" required>
+            
+            </div>
+            <div class="form-group">
+               
+                <input type="email" class="form-control" name="email" formControlName="email" #email placeholder="email" required>
+            </div>
+            <div class="form-group">
+                
+                <input type="password" class="form-control" name="password" formControlName="password" #password placeholder="Create Password" required>
+            </div>
+            <button type="submit" class="btn btn-block btn-primary" (click)="registerUser(name.value,email.value,password.value)">Sign up</button>
+            <p class="sign-up-paragraph" >Already have account? <span  (click)="displayForm('signIn')"><u title="sign in">Log in</u></span></p>
+          
+          </form>
+    
+      
+    </div>
+    <div class="sign-up-image">
+        <p>Start up with <b>In<span>Schedule</span></b></p>
+        <img src="../../../assets/images/sign_up.png" alt="sign up image" srcset="">
+    </div>
+     </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+ aria-labelledby="myModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+ <div class="modal-content">
+ <div class="modal-header">
+ <button type="button" class="close" data-dismiss="modal"
+ aria-hidden="true">×
+ </button>
+ <h4 class="modal-title" id="myModalLabel">
+ <!-- This Modal title -->
+ </h4>
+ </div>
+ <div class="modal-body">
+
+     <div class="center-block modal-body-profile-img-container">
+           <img src="../assets/avatars/{{userProfileAvatar}}" alt="user profile img" class="shadow">
+           <!-- <span><img src="../assets/icons/pen-icon.png" alt="change" class="change-avatar"></span> -->
+           <small (click)="displaySelectAvatarBlock()">update</small>
+   
+          </div>
+    
+    
+      <div class="input-block">
+          <mat-form-field>
+              <!-- <label for="">user name</label> -->
+              <input matInput type="text"  value="{{loggedInUserName}}" #userNameInput>
+          </mat-form-field>
+
+          <p><label for="">Email:</label> {{loggedInUserEmail}}</p>
+
+      </div>
+
+      <!-- <div class="" *ngIf="this.authService.displayAvatarBlock" style="width: 100%;"> -->
+      
+      <div class="main-avatar-block">
+      <div class="avatars-block" *ngFor="let avatar of avatarArr">
+          <input type="text" value="{{avatar}}" #avatarName hidden>
+
+           <div class="avatar" (click)="updateAvatar(avatarName.value)">
+
+          <!-- hello -->
+          <!-- {{avatar}} -->
+          <img src="../assets/avatars/{{avatar}}" alt="">
+        
+       </div>
+       
+     
+      </div>
+    </div>  
+    <!-- </div> -->
+ 
+ </div>
+ <div class="modal-footer">
+ <button type="button" class="btn cancel-changes-model-btn"
+ data-dismiss="modal">
+ Cancel
+ </button>
+ <button type="button" class="btn save-changes-model-btn" (click)="updateUserInfo(userNameInput.value)">
+ Save changes
+ </button>
+ </div>
+ </div><!-- /.modal-content -->
+ </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script>
+ $(function () { 
+   $('#myModal').modal('hide')
+   });
+</script>
+<script>
+ $(function () { $('#myModal').on('hide.bs.modal', function () {
+ alert('Hey, I heard you like modals...');})
+ });
+</script>
+<script>
+ 
+  $(function(){
+    $('#mobile-sidebar').classList.toggle('active');
+    $('#app-container').classList.toggle('hide-container');
+  })
+</script>
+</ng-container>
+</div>
+
+
+
+<router-outlet></router-outlet>

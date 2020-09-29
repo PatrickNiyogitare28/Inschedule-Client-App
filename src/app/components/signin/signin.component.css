@@ -1,0 +1,89 @@
+.sign-in-component{
+    /* background-color: red !important; */
+    width: 100%;
+    margin-top: 5%;
+}
+.sign-in-component input{
+  border: 1px #898f8aef solid; 
+  border-radius: 17px;
+  width: 70%;
+  margin: 0 10%;
+  font-size: 15px;
+  
+}
+.sign-in-component input:hover{
+    border-color: #2a9238ef;
+}
+.sign-in-component label{
+    margin: 0 10%;
+}
+
+.sign-in-component button{
+ background-color:  #2a9238ef !important;
+ border-radius: 17px;
+ border-color: #2a9238ef;
+ width: 70%;
+ margin: 0 10%;
+ margin-top:2.5em;
+}
+
+.signIn-auth-wrapper{
+    float: right;
+    /* position:absolute; */
+    width: 50%;
+   
+   
+}
+
+.signIn-web-detail{
+    clear:both;
+    float:left;
+    position:absolute;
+    width:50%;
+   
+}
+.form-signin{
+    width: 80%;
+    padding: 2%;
+}
+
+
+.signIn-form-box{
+    margin-left: 3em;
+}
+
+
+.sign-In-paragraph{
+    color: #5f6260;
+    margin-top: 1em;
+    margin-left: 2em;
+   
+}
+.sign-In-paragraph span{
+    color: #2a9238;
+    font-weight: bold;
+    
+}
+
+.signIn-top-paragraphy{
+  font-size: 2em;
+  color: #5d615e;
+  text-align: center;
+  font-family: 'Century Gothic';
+  font-weight: lighter !important;
+  
+} 
+.signIn-top-paragraphy span{
+    color: #2a9238;
+    font-size: 1.5em;
+}
+.schedule-login-img{
+    width: 350px;
+    margin: 0 10%;
+}
+.errorMessage{
+    font-size: 15px;
+    color: rgb(241, 18, 18);
+    font-weight: lighter;
+    text-align: center;
+}

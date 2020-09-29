@@ -1,0 +1,69 @@
+.font-family{
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{ font-size: 20px}
+p b{
+    color: hsl(123, 52%, 30%) !important;
+   
+}
+.schedule-time-input{
+    width: 100%;
+}
+input{
+    border: 1px #257429 solid;
+    border-radius: 0%;
+    /* display: inline; */
+    
+}
+input:hover{
+    border: 1px #29862e solid;
+}
+.startTime{
+    float: left;
+    width: 49%;
+    /* position: absolute; */
+
+}
+/* .startTime input{
+    width: 50%;
+} */
+.endTime{
+    margin-top: -3.4em;
+    margin-left: 1.5em;
+    clear:both;
+    float: right;
+    width: 49%;
+}
+/* .endTime input{
+    width: 50%;
+} */
+
+.buttons{
+    width: 100%;
+    clear:both;
+}
+button{
+   
+    width: 50%;
+    
+}
+.btn-bg-green{
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0%;
+    background-color: #428f46 !important;
+    border-color: #428f46 !important;
+    color: white;
+}
+.btn-bg-green:hover{
+    background-color: #279c2d !important;
+    border-color: #279c2d !important;
+}
+.bt-color-silver{
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0%;
+    background-color: #e2e7e2 !important;
+    border-color: #e2e7e2 !important;
+    
+}

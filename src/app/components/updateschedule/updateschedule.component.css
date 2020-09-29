@@ -1,0 +1,63 @@
+.container{
+    margin-left: 40%;
+   
+    width: 50%;
+    /* background-color: red; */
+}
+.card-body{
+    margin-top: 6em;
+}
+.update-form{
+    padding: 2em;
+    width: 50%;
+    margin-top: 8em;
+    margin-left: 30%;
+    border: 1px solid rgb(158, 156, 156);
+    position: absolute;
+}
+input,select{
+    width: 70%;
+    padding: 0.5em;
+    border: 1px solid  #3e8b42;
+    margin: 0 20%;
+    color: #4a4e4b;
+    font-size: 0.9em;
+}
+input :hover{
+    border: 1px solid #3e8b42;
+}
+label{
+    color: #4a4e4b;
+    font-size: 15px;
+    margin-left: 24%;
+    margin-top: 0.3em;
+}
+button{
+    width: 50%;
+    background-color:  #3e8b42;
+    border: 1px solid #3e8b42;
+    margin: 0 26%;
+    border-radius: 20px;
+    font-weight: lighter !important;
+}
+button:hover{
+    background-color: #41b147;
+    border-color: #41b147;
+}
+.startTime{
+    width: 50%;
+    float: left; 
+    margin-left: 4em;
+   
+}
+.endTime{
+  
+    float: right;
+    width: 50%;
+    margin-top: -5.5em;
+    /* margin-left: -4em !important; */
+}
+.schedule-time-input{
+    display: inline;
+   
+}

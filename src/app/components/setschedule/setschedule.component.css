@@ -1,0 +1,145 @@
+.container{
+ 
+    width: 80%;
+   
+    float: right;
+    height: 68% !important;
+  
+   
+
+}
+.secondary-container{
+    width: 80%;
+    margin-top: 2%;
+    margin-left:10%;
+    /* background-color:red !important; */
+    height: 400px;
+   
+}
+.side-form{
+    /* background-color: #2a9238 !important; */
+
+    width: 32%;
+    float: left;
+    height: 62%;
+    position: absolute;
+    background: red;
+   
+}
+.side-form img{
+    width: 100%;
+    height: 101.5%;
+
+}
+.form{
+  clear: left;
+  float: right;
+  width: 50%;
+ 
+}
+form{
+    margin-top: 1.5em;
+}
+
+
+.input{
+    width: 70%;
+    padding: 0.5em;
+    /* border: 1px solid  #3e8b42; */
+    /* border-bottom-style: 1px solid #3e8b42; */
+    margin: 0 20%;
+    color: #4a4e4b;
+    font-size: 0.9em;
+    border: 1px solid #3e8b42;
+    border-radius: 0px 0px;
+}
+.select{
+    width: 70%;
+    padding: 0.5em;
+    /* border: 1px solid  #3e8b42; */
+    /* border-bottom-style: 1px solid #3e8b42; */
+    margin: 0 20%;
+    color: #4a4e4b;
+    font-size: 0.9em;
+    border: 1px solid #3e8b42;
+    border-radius: 0px;
+}
+input :hover{
+  
+    border: 1px solid #3e8b42;
+}
+.event-day{
+    color: #4a4e4b;
+    font-size: 12px;
+    margin-left: 19%;
+    margin-top: 0.3em;
+}
+.event-name{
+    color: #4a4e4b;
+    font-size: 12px;
+    margin-left: 19%;
+    margin-top: 0.3em;
+}
+
+
+button{
+    width: 50%;
+    background-color:  #3e8b42;
+    border: 1px solid #3e8b42;
+    margin: 0 26%;
+    border-radius: 20px;
+    font-weight: lighter !important;
+}
+.top{
+    margin-top:2em;
+}
+button:hover{
+    background-color: #41b147;
+    border-color: #41b147;
+}
+.schedule-time-input{
+   
+    width: 70%;
+    margin: 0 20%;
+    display: flex;
+    flex-direction: row;
+   
+ }
+.startTime{
+    width:45%;
+}
+.startTime input{
+    text-align: center;
+     border: 1px solid  #3e8b42;
+     color: #4a4e4b;
+     font-size: 0.9em;
+     border-radius: 0px;
+     /* padding-left: 3em; */
+}
+.startTime label{
+    color: #4a4e4b;
+    font-size: 12px;
+    margin-left: 0%;
+    margin-top: 0.3em;
+}
+.endTime{
+   
+    width: 45%;
+    margin-left: 7%;
+}
+.endTime input{
+    text-align: center;
+    border-radius: 0px;
+    border: 1px solid  #3e8b42;
+    color: #4a4e4b;
+    font-size: 0.9em;
+    width: 130px;
+   
+}
+.endTime label{
+    color: #4a4e4b;
+    font-size: 12px;
+    margin-left: 0%;
+    margin-top: 0.3em;
+}
+

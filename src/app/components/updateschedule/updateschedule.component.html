@@ -1,0 +1,76 @@
+
+                  <div class="update-form shadow-lg p-3 mb-5 bg-white rounded">
+                    <form [formGroup]="angForm" novalidate>
+                        <div class="form-group">
+                         
+                          <label class="col-md-4">Event Name</label>
+                          <input type="text" class="form-control" 
+                            formControlName="eventName" 
+                            #eventName 
+                            [(ngModel)] = "userSchedule.eventName"/>
+                        </div>
+                        <div *ngIf="angForm.controls['eventName'].invalid && (angForm.controls['eventName'].dirty || angForm.controls['eventName'].touched)" class="alert alert-danger">
+                          <div *ngIf="angForm.controls['eventName'].errors.required">
+                            Event Name is required.
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-md-4">Event Day </label>
+                         <!-- <input type="text" class="form-control"  formControlName="eventDay"  #eventDay [(ngModel)] = "userSchedule.eventDay" /> -->
+                         <select name="eventDay" id="exampleFormControlSelect1"   type="text" class="form-control"  formControlName="eventDay"  #eventDay [(ngModel)] = "userSchedule.eventDay" >
+                           <option value="Monday">Monday</option>
+                           <option value="Tuesday">Tuesday</option>
+                           <option value="Wensday">Wensday</option>
+                           <option value="Thursday">Thursday</option>
+                           <option value="Friday">Friday</option>
+                           <option value="Saturday">Saturday</option>
+                           <option value="Sunday">Sunday</option>
+                         </select>
+                         
+                         
+                        </div>
+                        <div *ngIf="angForm.controls['eventDay'].invalid && (angForm.controls['eventDay'].dirty || angForm.controls['eventDay'].touched)" class="alert alert-danger">
+                          <div *ngIf="angForm.controls['eventDay'].errors.required">
+                          Day required
+                          </div>
+                        </div>
+                         <div class="schedule-time-input">
+                         <div class="startTime">
+                        <div class="form-group ">
+                          <label class="col-md-4">Start Time</label>
+                          <input type="text" class="form-control"  formControlName="eventStartTime"    #eventStartTime  [(ngModel)] = "userSchedule.eventStartTime" />
+                           
+                         
+                          
+                          
+                        </div>
+                        <div *ngIf="angForm.controls['eventStartTime'].invalid && (angForm.controls['eventStartTime'].dirty || angForm.controls['eventStartTime'].touched)" class="alert alert-danger">
+                          <div *ngIf="angForm.controls['eventStartTime'].errors.required">
+                           Start Time is required
+                          </div>
+                        </div>
+                      </div>
+                        <div class="endTime">
+                        <div class="form-group">
+                                <label class="col-md-4">End Time</label>
+                                <input type="text" class="form-control" 
+                                  formControlName="eventEndTime" 
+                                  #eventEndTime
+                                  [(ngModel)] = "userSchedule.eventEndTime"
+                                />
+                              </div>
+                              <div *ngIf="angForm.controls['eventEndTime'].invalid && (angForm.controls['eventEndTime'].dirty || angForm.controls['eventEndTime'].touched)" class="alert alert-danger">
+                                <div *ngIf="angForm.controls['eventEndTime'].errors.required">
+                                 End Time is required.
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        <div class="form-group">
+                          <button (click) = "updateSchedule(eventName.value, eventStartTime.value, eventEndTime.value, eventDay.value)" type="submit" class="btn btn-primary"
+                          [disabled]="angForm.invalid" >
+                            Update Product
+                          </button>
+                        </div>
+                      </form>
+                    </div>    

@@ -1,0 +1,29 @@
+
+.container{
+    /* display:none; */
+    float: right;
+    width: 80%;
+   
+}
+.image{
+    width: 400px;
+    /* margin-top: 4em;
+    margin-left:10%; */
+}
+.schedule-login-img{
+    width: 400px;
+}
+.wel-pargr{
+    font-size: 2em;
+    color: rgb(101, 102, 104);
+    font-family: 'Century Gothic';
+}
+.wel-pargr span{
+    color: black;
+    font-size: 1.5em;
+    display: inline-block;
+
+}
+.wel-pargr b{
+    color: #2a9238;
+}

@@ -1,0 +1,44 @@
+@media only screen and (max-width: 600px){
+    *{
+        border: 0%;
+        padding: 0%;
+        margin: 0%;
+    }
+
+    .secondary-container{
+        background: blue;
+        width: 83%;
+        padding: 0px;
+        margin: 0px;
+        border: 0px;
+        margin: 0 10%;
+        /* margin-left: -0.2em; */
+    }
+    .container{
+        width: 100%;
+        background: red;
+        /* padding: 0px;
+        margin: 0px;
+        border: 0px; */
+     
+    }
+    .side-form{
+        display:none;
+    }
+    .form{
+        width: 100%;
+        /* padding: 0px;
+        margin: 0px;
+        border: 0px; */
+        background: yellow;
+    }
+   
+    .endTime input{
+        width: 100px;
+    }
+    
+}
+
+@media screen and (min-width:1200px){
+  
+}

@@ -1,0 +1,93 @@
+@media only screen and (max-width: 600px){
+    .container{
+        width: 100%;
+        /* background: blue; */
+        padding: 0;
+        height: 400px;
+
+    }
+    /* .primary-container{
+        background: red;
+        width: 100%;
+        height: 600px;
+        overflow: scroll;
+      } */
+    .secondary-container{
+        padding: 0;
+        width: 100%;
+        /* overflow: scroll; */
+        margin-right: -0.1em;
+        display: flex;
+        flex-direction: row;
+       /* background:red; */
+        height: 90%;
+        overflow-y: scroll;
+        
+    }
+    .example-list{
+        padding: 0;
+    }
+    .example-box{
+        padding: 0;
+    }
+    .list-container{
+        /* width: 50%; */
+        /* background: red; */
+        padding: 0;
+        /* overflow: scroll; */
+        /* display:  inline; */
+       
+    }
+    .task{
+        padding: 0;
+        border:0px;
+        border-bottom: 1px grey solid;
+    }
+    .list-container h5{
+        font-size: 10px;
+    
+    }
+    .list-container span{
+        display: none;
+    }
+    .list-container h6 span{
+        display: block;
+        font-size: 7px;
+    }
+    .list-container h6 b{
+        font-size: 9px;
+    }
+    .list-container h6{
+        padding-top: 0;
+    }
+    .header-icon{
+        width: 50%;
+    }
+    .acomplish-img{
+        width: 30%;
+        float: right;
+    }
+   .table-td-th{
+    /* background-color: green !important;
+    color: red !important;
+    border-color: green !important; */
+     padding: 3em;
+    /* width: 100px; */
+    }
+    .table-td-th span{
+        display: inline;
+    }
+    .table-td-full-width{
+        width: 100%;
+    }
+    
+    /* .get-schedule-table{
+        margin-left: 5%;
+        background: red !important;
+    } */
+    
+}
+
+@media screen and (min-width:1200px){
+   
+}

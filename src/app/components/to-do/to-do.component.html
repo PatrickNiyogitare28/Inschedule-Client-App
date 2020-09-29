@@ -1,0 +1,78 @@
+
+<div class="container">
+    <div class="save-btn font-family">
+     
+      <div class="add-btn">
+        <button mat-stroked-button  title="Add new Task" (click)="displayAddToDoForm()">Add Task</button>
+      </div>  
+    </div>
+    
+    <!-- <div class="form-field bg-white shadow"  *ngIf="this.authService.displayAddToDo">     -->
+        <div class="form-field bg-white shadow" id="form-field">     
+        <!-- <input type="text" contenteditable="true"> -->
+        <!-- <h4>Add Todo</h4> -->
+        <mat-form-field>
+      
+            <mat-label>Task Name</mat-label>
+            <input matInput  #taskName>
+          </mat-form-field>
+          
+      <button mat-stroked-button (click)="addTodo(taskName.value,0,0)">Add todo</button>
+    </div>
+    
+    <div class="secondary-container">
+    <div class="example-container example-container-todo font-family">
+      
+        <h2>To do</h2>
+      
+        <div
+          cdkDropList
+          #todoList="cdkDropList"
+          [cdkDropListData]="todo"
+          [cdkDropListConnectedTo]="[doingList,doneList]"
+          class="example-list example-list-todo"
+          (cdkDropListDropped)="drop($event)">
+          <div class="example-box example-box-todo" *ngFor="let item of todo" cdkDrag>{{item}}
+            <span (click)="removeTask(item,0)"><img src="../../../assets/icons/delete-gray-icon.png" alt="delete icon" title="Remove"></span>
+          </div>
+    
+        </div>
+      </div>
+    
+      <div class="example-container example-container-doing font-family">
+        <h2>Doing</h2>
+      
+        <div
+          cdkDropList
+          #doingList="cdkDropList"
+          [cdkDropListData]="doing"
+          [cdkDropListConnectedTo]="[doneList,todoList]"
+          class="example-list"
+          (cdkDropListDropped)="drop($event)">
+          <div class="example-box example-box-doing" *ngFor="let item of doing" cdkDrag>{{item}}
+              <span (click)="removeTask(item,2)"><img src="../../../assets/icons/delete-gray-icon.png" alt="delete icon" title="Remove"></span>
+    
+          </div>
+        </div>
+      </div>
+      
+      <div class="example-container example-container-done font-family">
+        <h2>Done</h2>
+      
+        <div
+          cdkDropList
+          #doneList="cdkDropList"
+          [cdkDropListData]="done"
+          [cdkDropListConnectedTo]="[todoList,doingList]"
+          class="example-list"
+          (cdkDropListDropped)="drop($event)">
+          <div class="example-box example-box-done" *ngFor="let item of done" cdkDrag>{{item}}
+              <span (click)="removeTask(item,1)"><img src="../../../assets/icons/delete-gray-icon.png" alt="delete icon" title="Remove"></span>
+    
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+      
+      

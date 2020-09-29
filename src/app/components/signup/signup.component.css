@@ -1,0 +1,107 @@
+.sign-up-component{
+    margin-top: 5%;
+}
+.sign-up-component input{
+    border: 1px #898f8aef solid; 
+    border-radius: 17px;
+    width: 70%;
+    margin: 0 15%;
+    font-size: 15px;
+    
+  }
+  .sign-up-component input:hover{
+      border-color: #2a9238ef;
+  }
+  
+  
+  .sign-up-component button{
+   background-color:  #2a9238ef !important;
+   border-radius: 17px;
+   border-color: #2a9238ef;
+   width: 70%;
+   margin: 0 15%;
+   margin-top:2.5em;
+  }
+  
+.auth-wrapper{
+    margin-left: 10%;
+    margin-top: 7em;
+    background-color: rgba(219, 214, 214, 0.322);
+    width: 45%;
+    padding-bottom: 3em;
+}
+
+.body{
+    background-color: red;
+}
+.container{
+    margin-left: 45em;
+    width: 40%;
+}
+
+.form-box{
+    margin-left: 3em;
+}
+
+
+
+
+.sign-up-paragraph{
+    color: #5f6260;
+    margin-top: 1em;
+    margin-left: 10%;
+}
+.sign-up-paragraph span{
+    color: #2a9238;
+    font-weight: bold;
+    
+}
+
+.signUp-auth-wrapper{
+    width: 50%;
+    float:right;
+    background:blue;
+    /* position: absolute; */
+}
+.form-signUp {
+    padding-top:2%;
+}
+.sign-up-image{
+    clear:both;
+    width: 50%;
+    float:left;
+   
+    position: absolute;
+}
+.sign-up-image img{
+    width: 60%;
+    margin:0 10%;
+}
+.sign-up-image p{
+    font-size: 1.8em;
+    margin:0 10%;
+    font-weight: lighter;
+    font-family: 'Century Gothic';
+}
+.sign-up-image b{
+    color: black;
+    font-weight: bolder;
+    font-size: 1.7em;
+}
+.sign-up-image span{
+    color: #2a9238;
+}
+.sign-up-paragraph{
+    color: #5f6260;
+    /* margin-top: 1em;
+    margin-left: 15%; */
+    padding-bottom: 5%;
+    margin: 0 20%;
+    /* text-align: left; */
+   
+}
+.sign-up-paragraph span{
+    color: #2a9238;
+    font-weight: bold;
+    
+}

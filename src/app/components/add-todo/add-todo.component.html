@@ -1,0 +1,30 @@
+
+<div class="main-container">
+    <div class="save-btn">
+          <div class="save-img" routerLinkActive="active" routerLink="to-do">
+              <button mat-stroked-button  title="go to Todo">ToDo</button>
+            <!-- <img  src="../../../assets/icons/todo-icon.png" alt="save image" srcset="" title="Save"> -->
+          </div>
+          <div class="add-btn" routerLinkActive="active" routerLink="add-todo">
+            
+            <button mat-stroked-button  title="Add new Task">Add Task</button>
+          </div>  
+      </div>
+  
+  
+      <div class="form-field">    
+        <form action="">
+          <!-- <input type="text" contenteditable="true"> -->
+          <h4>Add Todo</h4>
+          <mat-form-field>
+        
+              <mat-label>Task Name</mat-label>
+              <input matInput  #taskName>
+            </mat-form-field>
+            
+        <button mat-stroked-button (click)="addTodo(taskName.value,0,0)">Add todo</button>
+      </form>
+      </div>
+  </div>
+  
+    
